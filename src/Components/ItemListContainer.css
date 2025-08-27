@@ -1,0 +1,104 @@
+.item-list-container {
+  min-height: calc(100vh - 80px);
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.87);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.welcome-message {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.products-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.product-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(100, 108, 255, 0.2);
+}
+
+.product-placeholder {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  color: rgba(255, 255, 255, 0.87);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.product-card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: light) {
+  .welcome-title {
+    color: #213547;
+  }
+  
+  .welcome-message {
+    color: #666;
+  }
+  
+  .product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .product-card h3 {
+    color: #213547;
+  }
+  
+  .product-card p {
+    color: #666;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .welcome-message {
+    font-size: 1rem;
+  }
+  
+  .products-preview {
+    grid-template-columns: 1fr;
+  }
+}
